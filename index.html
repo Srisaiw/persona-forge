@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PersonaForge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>PersonaForge</h1>
+      <p>Generate and explore random identities</p>
+      <button id="generateBtn">Generate New Users</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="loading" class="loading hidden">Loading users...</div>
+    <div id="error" class="error hidden">Something went wrong. Please try again.</div>
+    <section id="userContainer" class="user-grid"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
