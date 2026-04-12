@@ -9,15 +9,40 @@
 <body>
   <header class="header">
     <div class="container">
-      <h1>PersonaForge</h1>
-      <p>Generate and explore random identities</p>
-      <button id="generateBtn">Generate New Users</button>
+      <div class="top-bar">
+        <div>
+          <h1>PersonaForge</h1>
+          <p>Generate and explore random identities</p>
+        </div>
+        <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
+      </div>
+
+      <div class="controls">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search by name or country"
+        />
+
+        <select id="nationalityFilter">
+          <option value="all">All Nationalities</option>
+        </select>
+
+        <select id="ageSort">
+          <option value="default">Sort by Age</option>
+          <option value="asc">Age: Low to High</option>
+          <option value="desc">Age: High to Low</option>
+        </select>
+
+        <button id="generateBtn">Generate New Users</button>
+      </div>
     </div>
   </header>
 
   <main class="container">
     <div id="loading" class="loading hidden">Loading users...</div>
     <div id="error" class="error hidden">Something went wrong. Please try again.</div>
+    <div id="emptyState" class="empty hidden">No users found.</div>
     <section id="userContainer" class="user-grid"></section>
   </main>
 
